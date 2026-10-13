@@ -31,8 +31,10 @@ for _ in range(n):
             max_temp = temp
 
 
-avg_temp = sum_temp / valid_count
-
+if valid_count != 0:
+    avg_temp = sum_temp / valid_count
+else:
+    avg_temp = 0
 
 print(n)
 print(error_count)
