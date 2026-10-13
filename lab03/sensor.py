@@ -29,3 +29,13 @@ for _ in range(n):
             max_temp = temp 
         elif temp > max_temp:
             max_temp = temp
+
+
+avg_temp = sum_temp / valid_count
+
+
+print(n)
+print(error_count)
+print(exceed_count)
+print(f"{max_temp:.1f}")
+print(f"{avg_temp:.1f}")
