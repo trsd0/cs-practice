@@ -6,6 +6,10 @@ def winner(names: list[str], scores: list[float]) -> str:
             best_index = i
     return names[best_index]
 
+def average(scores: list[float]) -> float:
+    if not scores:
+        return 0.0
+    return round(sum(scores) / len(scores), 2)
 
 
 
