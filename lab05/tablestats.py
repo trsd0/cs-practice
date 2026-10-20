@@ -17,4 +17,13 @@ def read_rows(lines: list[str]) -> list[dict]:
             result.append(row_dict)
     return result
 
+def count_types(rows: list[dict]) -> dict:
+    result = {}
+    for row in rows:
+        result[row['тип']] = result.get(row['тип'], 0) + 1
+    return result
+
+
+        
+
 
