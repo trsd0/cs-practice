@@ -18,3 +18,20 @@ def block(
     arr = np.asarray(matrix, dtype=float)
     sub = arr[np.ix_(rows, columns)]
     return np.round(sub, 6).tolist()
+
+
+def column_means(matrix: list[list[float]]) -> list[float]:
+    if not matrix or not matrix[0]:
+        return []
+    arr = np.asarray(matrix, dtype=float)
+    means = np.mean(arr, axis=0)
+    return np.round(means, 6).tolist()
+
+
+def column_range(matrix: list[list[float]], column: int) -> float:
+    if not matrix or not matrix[0]:
+        return 0.0
+    arr = np.asarray(matrix, dtype=float)
+    col = arr[:, column]
+    diff = float(np.max(col) - np.min(col))
+    return np.round(diff, 6)
